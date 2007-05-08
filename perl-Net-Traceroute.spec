@@ -1,7 +1,7 @@
 %define module Net-Traceroute
 %define name perl-Net-Traceroute
 %define version 1.09
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Net-Traceroute module for perl 
 Name:		%{name}
@@ -30,6 +30,7 @@ command.
 
 %make OPTIMIZE="%{optflags}" CFLAGS="%{optflags}"
 
+%check
 # make test dies...
 # make test
 
