@@ -1,7 +1,7 @@
 %define module Net-Traceroute
 %define name perl-Net-Traceroute
-%define version 1.09
-%define release %mkrel 4
+%define version 1.10
+%define release %mkrel 1
 
 Summary:	Net-Traceroute module for perl 
 Name:		%{name}
