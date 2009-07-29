@@ -1,19 +1,18 @@
-%define module Net-Traceroute
-%define name perl-Net-Traceroute
-%define version 1.10
-%define release %mkrel 4
+%define upstream_name    Net-Traceroute
+%define upstream_version 1.10
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Net-Traceroute module for perl 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements traceroute(1) functionality for perl5. It
@@ -22,8 +21,7 @@ is currently implemented as a parser around the system traceroute
 command.
 
 %prep
-
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,4 +45,3 @@ rm -rf %{buildroot}
 %doc ChangeLog README TODO
 %{perl_vendorlib}/*
 %{_mandir}/*/*
-
