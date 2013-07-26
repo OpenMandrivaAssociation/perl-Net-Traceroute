@@ -1,15 +1,15 @@
 %define upstream_name    Net-Traceroute
-%define upstream_version 1.13
+%define upstream_version 1.14
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 1.14
+Release:	1
 
 Summary:	Net-Traceroute module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Net/Net-Traceroute-1.14.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -98,4 +98,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Thu Feb 10 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 1.08-1mdk
 - initial Mandrakelinux package
+
 
