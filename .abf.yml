@@ -1,4 +1,5 @@
 removed_sources:
   Net-Traceroute-1.13.tar.bz2: 48b6498aedb310d85637f4c52c63043bf231e571
-sources:
   Net-Traceroute-1.14.tar.gz: f8489b4989537222e50fc5fc0f2bba870243d44c
+sources:
+  Net-Traceroute-1.15.tar.gz: ee46491bc19947a3bd935cf48d01e4ecb21626e3
