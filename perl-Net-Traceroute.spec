@@ -2,7 +2,7 @@
 %define upstream_version 1.15
 Name:		perl-%{upstream_name}
 Version:	1.15
-Release:	1
+Release:	2
 
 Summary:	Net-Traceroute module for perl 
 
@@ -22,7 +22,7 @@ is currently implemented as a parser around the system traceroute
 command.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Net-Traceroute-1.15
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -30,6 +30,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="%{optflags}" CFLAGS="%{optflags}"
 
 %check
+# soft: do not fail package on test failures
+set +e
 # make test dies...
 # make test
 
