@@ -1,14 +1,15 @@
 %define upstream_name    Net-Traceroute
+%define upstream_version 1.15
 Name:		perl-%{upstream_name}
 Version:	1.15
-Release:	4
+Release:	1
 
 Summary:	Net-Traceroute module for perl 
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Net/%{upstream_name}-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAG/Net-Traceroute-1.15.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
