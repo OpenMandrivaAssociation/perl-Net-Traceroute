@@ -2,7 +2,7 @@
 %define upstream_version 1.15
 Name:		perl-%{upstream_name}
 Version:	1.15
-Release:	2
+Release:	3
 
 Summary:	Net-Traceroute module for perl 
 
@@ -32,8 +32,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
-# make test dies...
-# make test
+# make test || : dies...
+# make test || :
 
 %install
 %makeinstall_std
